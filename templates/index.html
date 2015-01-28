@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    here's index page
+    {% if poll_list %}
+    {% for i in poll_list %}
+      <ul>
+          <li>
+              <!--polls:detail中的polls和detail分别是在url.py种定义的命名空间namespace和url页面的别名(可以没有命名空间,只是为了防止url名称重复) -->
+              <a href="{% url 'polls:detail' i.id %}" title="{{ i.pub_date }}">{{ i.question }}</a>
+          </li>
+      </ul>  
+    {% endfor %}
+{% else %}
+        <p>nothing to show</p>
+{% endif %}
+</body>
+</html>
