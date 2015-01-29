@@ -36,10 +36,6 @@ def vote(req,poll_id):
 		#此处的polls:result表示polls域名空间下的name=result的url
 		return HttpResponseRedirect(reverse('polls:result',args=(p.id,)))
 
-def result(req,poll_id):
-	poll = get_object_or_404(Poll,pk=poll_id)
-	return render_to_response('result.html',{'poll':poll},context_instance=RequestContext(req))
-
 def detail(req,poll_id):
 
 	try:
@@ -54,5 +50,9 @@ def detail(req,poll_id):
 	poll = get_object_or_404(Poll,pk=poll_id)
 	'''
 	return render_to_response('detail.html',{'poll':poll},context_instance=RequestContext(req))
+
+def result(req,poll_id):
+	poll = get_object_or_404(Poll,pk=poll_id)
+	return render_to_response('result.html',{'poll':poll},context_instance=RequestContext(req))
 
 
