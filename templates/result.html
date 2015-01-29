@@ -5,7 +5,15 @@
     <title></title>
 </head>
 <body>
-      here's result page
-poll id:{{ poll_id }}
+<h1>{{ poll.question }}</h1>
+<ul>
+    {% for choice in poll.choice_set.all %}
+    <li>
+    <!-- choice.votes|pluralize 用来判断choice.votes是否大于1，是的话对于前面的单词vote给出复数形式-->
+           投票项{{ forloop.counter }}:{{ choice.choice_text }}--->{{ choice.votes }}vote{{ choice.votes|pluralize }}
+    </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'polls:index' %}" >再投一次？</a>
 </body>
 </html>

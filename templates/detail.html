@@ -5,13 +5,17 @@
     <title></title>
 </head>
 <body>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
      here's detail page
+<form   action="{% url 'polls:vote' poll.id %}" method="post">
+<!-- 防跨站请求-->
+{% csrf_token %}
 {% for choice in poll.choice_set.all %}
-    <ul>
-    <li>
-        {{ choice.choice_text }}
-    </li>
-    </ul>
+<input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+
 {% endfor %}
+<input type="submit" value="vote">
+</form>
 </body>
 </html>
