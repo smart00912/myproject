@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6dc2489f-a300-41f5-98ff-5824271b39bf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poll/urls.py" afterPath="$PROJECT_DIR$/poll/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poll/views.py" afterPath="$PROJECT_DIR$/poll/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="myproject.iws" />
@@ -719,7 +717,13 @@
       <option name="project" value="LOCAL" />
       <updated>1422503916526</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="通用视图">
+      <created>1422505977334</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1422505977334</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -789,7 +793,8 @@
     </option>
     <MESSAGE value="苟富贵" />
     <MESSAGE value="company" />
-    <option name="LAST_COMMIT_MESSAGE" value="company" />
+    <MESSAGE value="通用视图" />
+    <option name="LAST_COMMIT_MESSAGE" value="通用视图" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
