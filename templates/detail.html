@@ -7,7 +7,7 @@
 <body>
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
      here's detail page
-<form   action="{% url 'polls:vote' poll.id %}" method="post">
+<form   action="{% url  'author-polls:vote' poll.id %}" method="post">
 <!-- 防跨站请求-->
 {% csrf_token %}
 {% for choice in poll.choice_set.all %}

@@ -11,7 +11,7 @@
       <ul>
           <li>
               <!--polls:detail中的polls和detail分别是在url.py种定义的命名空间namespace和url页面的别名(可以没有命名空间,只是为了防止url名称重复) -->
-              <a href="{% url 'polls:detail' i.id %}" title="{{ i.pub_date }}">{{ i.question }}</a>
+              <a href="{% url 'author-polls:detail' i.id %}" title="{{ i.pub_date }}">{{ i.question }}</a>
           </li>
       </ul>  
     {% endfor %}
